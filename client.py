@@ -1,7 +1,11 @@
 import socket
 
-HOST = '192.168.56.1'
+HOST = 'localhost'
 PORT = 65123
+
+HOST = input('Enter host: ')
+cad = input('Enter message: ')
+data = cad.encode()
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
   s.connect((HOST, PORT))
